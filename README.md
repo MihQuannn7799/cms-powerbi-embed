@@ -29,7 +29,7 @@ cms_app/
 │   │   ├── App.jsx
 │   │   └── index.css
 │   └── package.json
-└── supabase_schema.sql
+
 ```
 
 ## Setup
