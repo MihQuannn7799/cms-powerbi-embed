@@ -36,8 +36,6 @@ cms_app/
 
 ### 1. Supabase
 - Create project at [supabase.com](https://supabase.com)
-- Run SQL in `supabase_schema.sql`
-- Copy Project URL and Anon Key
 
 ### 2. Backend
 ```bash
