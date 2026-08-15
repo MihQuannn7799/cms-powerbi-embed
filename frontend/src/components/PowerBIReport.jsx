@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { PowerBIEmbed } from 'powerbi-client-react';
 import { models } from 'powerbi-client';
 
+const API_BASE = import.meta.env.VITE_API_URL || '/api';
+
 export default function PowerBIReport() {
   const [embedInfo, setEmbedInfo] = useState(null);
   const [error, setError] = useState(null);
@@ -11,7 +13,7 @@ export default function PowerBIReport() {
     setLoading(true);
     setError(null);
 
-    fetch('/api/powerbi/embed-info')
+    fetch(`${API_BASE}/api/powerbi/embed-info`)
       .then((res) => {
         if (!res.ok) throw new Error(`Request failed (${res.status})`);
         return res.json();
